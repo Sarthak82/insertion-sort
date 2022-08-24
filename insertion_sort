@@ -1,0 +1,14 @@
+#insertion sort
+def insertion_sort(nums):
+    for i in range(1,len(nums)):
+        # in this we areusing negative indexing
+        j=i-1
+        # if we take j=i-1 we need to take j>=0
+        #if we take j=i we need to take j>0
+        while nums[j]>nums[j+1] and j>=0:
+            nums[j],nums[j+1]=nums[j+1],nums[j]
+            j-=1
+
+nums=[21,31,12,1,4,98,2]
+insertion_sort(nums)
+print(nums)
